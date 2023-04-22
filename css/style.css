@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+.game-wrapper {
+  display: inline-block;
+  position: relative;
+  background: url("../img/birds.gif"), url("../img/background3.gif");
+  background-size: 33% 61%, 100% 100%;
+  background-repeat: repeat-x;
+  background-position: 0 49px, 0 0;
+  text-align: left;
+  border: 12px solid #555;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.game-bar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+.timerbox {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  background: #00adff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 55px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.player-state {
+  width: 100%;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.health-bar {
+  width: 100%;
+  background: #ccc;
+  height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+.player1 .health-bar {
+  flex-direction: row-reverse;
+}
+.health-line {
+  width: 100%;
+  height: 100%;
+  background: red;
+  transition: 0.3s ease;
+}
+.player-state.player2 {
+  text-align: right;
+}
+.player-state .player-name {
+  padding: 5px 10px;
+}
+.game-over {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+  flex-direction: column;
+  display: none;
+  text-shadow: 3px 1px black;
+}
+.game-over.active {
+  display: flex;
+  animation: scaleUp 1s 1 ease;
+}
+
+h2.game-result {
+  font-size: 73px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h5.game-winner {
+  font-size: 24px;
+}
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
