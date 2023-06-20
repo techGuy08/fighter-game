@@ -7,35 +7,32 @@ class Sprite {
     this.height = 250;
     this.width = 50;
     this.image = new Image();
+    this.image.onload = () => {
+      this.isLoaded = true;
+    };
     this.image.src = imgSrc;
     this.scale = scale;
     this.framesMax = framesMax;
     this.framesCurrent = 0;
     this.framesCount = 0;
     this.holdFrames = 5;
+    this.isLoaded = false;
   }
 
   draw() {
-    // c.fillStyle = "red";
-    // c.fillRect(this.position.x, this.position.y, this.width, this.height);
-    // c.fillStyle = "red";
-    // c.fillRect(
-    //   this.position.x - this.attackBox.offset.x,
-    //   this.position.y,
-    //   this.attackBox.width,
-    //   this.attackBox.height
-    // );
-    c.drawImage(
-      this.image,
-      this.framesCurrent * (this.image.width / this.framesMax),
-      0,
-      this.image.width / this.framesMax,
-      this.image.height,
-      this.position.x,
-      this.position.y,
-      (this.image.width / this.framesMax) * this.scale,
-      this.image.height * this.scale
-    );
+    if (this.isLoaded) {
+      c.drawImage(
+        this.image,
+        this.framesCurrent * (this.image.width / this.framesMax),
+        0,
+        this.image.width / this.framesMax,
+        this.image.height,
+        this.position.x,
+        this.position.y,
+        (this.image.width / this.framesMax) * this.scale,
+        this.image.height * this.scale
+      );
+    }
   }
   updateFrames() {
     this.framesCount++;
