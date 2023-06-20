@@ -19,37 +19,37 @@ const player = new Fighter({
     y: 0,
   },
   healthBarSelector: ".player1 .health-bar",
-  imgSrc: "./img/akai/idle.png",
+  imgSrc: "./img/Akai/Idle.png",
   scale: 4,
   framesMax: 10,
   sprites: {
     idle: {
-      imgSrc: "./img/akai/idle.png",
+      imgSrc: "./img/Akai/Idle.png",
       framesMax: 10,
     },
     run: {
-      imgSrc: "./img/akai/run.png",
+      imgSrc: "./img/Akai/Run.png",
       framesMax: 8,
     },
     jump: {
-      imgSrc: "./img/akai/Going-Up.png",
+      imgSrc: "./img/Akai/Going-Up.png",
       framesMax: 3,
     },
     fall: {
-      imgSrc: "./img/akai/Going-Down.png",
+      imgSrc: "./img/Akai/Going-Down.png",
       framesMax: 3,
     },
     attack1: {
-      imgSrc: "./img/akai/attack1.png",
+      imgSrc: "./img/Akai/Attack1.png",
       framesMax: 7,
       audioSrc: "./img/attack.wav",
     },
     death: {
-      imgSrc: "./img/akai/death.png",
+      imgSrc: "./img/Akai/Death.png",
       framesMax: 11,
     },
     hit: {
-      imgSrc: "./img/akai/Take-Hit.png",
+      imgSrc: "./img/Akai/Take-Hit.png",
       framesMax: 3,
     },
   },
@@ -70,36 +70,36 @@ const player2 = new Fighter({
     y: 0,
   },
   healthBarSelector: ".player2 .health-bar",
-  imgSrc: "./img/hanzo/idle.png",
+  imgSrc: "./img/Hanzo/Idle.png",
   scale: 4,
   framesMax: 11,
   sprites: {
     idle: {
-      imgSrc: "./img/hanzo/idle.png",
+      imgSrc: "./img/Hanzo/Idle.png",
       framesMax: 11,
     },
     run: {
-      imgSrc: "./img/hanzo/run.png",
+      imgSrc: "./img/Hanzo/Run.png",
       framesMax: 8,
     },
     jump: {
-      imgSrc: "./img/hanzo/jump.png",
+      imgSrc: "./img/Hanzo/Jump.png",
       framesMax: 4,
     },
     fall: {
-      imgSrc: "./img/hanzo/fall.png",
+      imgSrc: "./img/Hanzo/Fall.png",
       framesMax: 4,
     },
     attack1: {
-      imgSrc: "./img/hanzo/attack.png",
+      imgSrc: "./img/Hanzo/Attack.png",
       framesMax: 6,
     },
     death: {
-      imgSrc: "./img/hanzo/death.png",
+      imgSrc: "./img/Hanzo/Death.png",
       framesMax: 9,
     },
     hit: {
-      imgSrc: "./img/hanzo/Take-Hit.png",
+      imgSrc: "./img/Hanzo/Take-Hit.png",
       framesMax: 4,
     },
   },
