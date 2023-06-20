@@ -19,37 +19,37 @@ const player = new Fighter({
     y: 0,
   },
   healthBarSelector: ".player1 .health-bar",
-  imgSrc: "./img/akai/idle.png",
+  imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/idle.png",
   scale: 4,
   framesMax: 10,
   sprites: {
     idle: {
-      imgSrc: "./img/akai/idle.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/idle.png",
       framesMax: 10,
     },
     run: {
-      imgSrc: "./img/akai/run.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/run.png",
       framesMax: 8,
     },
     jump: {
-      imgSrc: "./img/akai/Going-Up.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/Going-Up.png",
       framesMax: 3,
     },
     fall: {
-      imgSrc: "./img/akai/Going-Down.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/Going-Down.png",
       framesMax: 3,
     },
     attack1: {
-      imgSrc: "./img/akai/attack1.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/attack1.png",
       framesMax: 7,
-      audioSrc: "./img/attack.wav",
+      audioSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/attack.wav",
     },
     death: {
-      imgSrc: "./img/akai/death.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/death.png",
       framesMax: 11,
     },
     hit: {
-      imgSrc: "./img/akai/Take-Hit.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/akai/Take-Hit.png",
       framesMax: 3,
     },
   },
@@ -70,36 +70,36 @@ const player2 = new Fighter({
     y: 0,
   },
   healthBarSelector: ".player2 .health-bar",
-  imgSrc: "./img/hanzo/idle.png",
+  imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/idle.png",
   scale: 4,
   framesMax: 11,
   sprites: {
     idle: {
-      imgSrc: "./img/hanzo/idle.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/idle.png",
       framesMax: 11,
     },
     run: {
-      imgSrc: "./img/hanzo/run.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/run.png",
       framesMax: 8,
     },
     jump: {
-      imgSrc: "./img/hanzo/jump.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/jump.png",
       framesMax: 4,
     },
     fall: {
-      imgSrc: "./img/hanzo/fall.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/fall.png",
       framesMax: 4,
     },
     attack1: {
-      imgSrc: "./img/hanzo/attack.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/attack.png",
       framesMax: 6,
     },
     death: {
-      imgSrc: "./img/hanzo/death.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/death.png",
       framesMax: 9,
     },
     hit: {
-      imgSrc: "./img/hanzo/Take-Hit.png",
+      imgSrc: "https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/hanzo/Take-Hit.png",
       framesMax: 4,
     },
   },
@@ -275,7 +275,7 @@ function decideGameEnd(player, player2, timerId) {
   clearTimeout(timerId);
 }
 
-const bgAudio = new Audio("./img/bg.mp3");
+const bgAudio = new Audio("https://raw.githubusercontent.com/techGuy08/fighter-game/main/img/bg.mp3");
 bgAudio.loop = true;
 bgAudio.volume = 0.5;
 bgAudio.play();
