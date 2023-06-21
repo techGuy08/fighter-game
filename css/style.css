@@ -45,7 +45,7 @@ body {
 }
 .player-state {
   width: 100%;
-  color: #000;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
@@ -71,6 +71,9 @@ body {
 }
 .player-state .player-name {
   padding: 5px 10px;
+  display: block;
+  background: rgb(0 0 0 / 51%);
+  border-radius: 4px;
 }
 .game-over {
   position: absolute;
@@ -106,4 +109,21 @@ h5.game-winner {
     opacity: 0;
     transform: scale(0.4);
   }
+}
+.game-over button {
+  font-size: 20px;
+  padding: 10px 20px;
+  display: block;
+  margin-top: 18px;
+  border-radius: 5px;
+  border: 0;
+  background: #0078b1;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.game-over button:hover {
+  background: #444;
+  transform: scale(1.1);
 }

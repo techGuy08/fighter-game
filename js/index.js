@@ -205,26 +205,7 @@ function update() {
     console.log("player2 attacked");
   }
 }
-function collisionDetect(rect1, rect2) {
-  let x =
-    (rect1.position.x + rect1.attackBox.width - rect1.attackBox.offset.x >=
-      rect2.position.x &&
-      rect1.position.x + rect1.attackBox.width - rect1.attackBox.offset.x <=
-        rect2.position.x + rect2.width) ||
-    (rect1.position.x - rect1.attackBox.offset.x <= rect2.position.x &&
-      rect1.position.x + rect1.attackBox.width - rect1.attackBox.offset.x >=
-        rect2.position.x + rect2.width) ||
-    (rect1.position.x - rect1.attackBox.offset.x >= rect2.position.x &&
-      rect1.position.x - rect1.attackBox.offset.x <=
-        rect2.position.x + rect2.width);
-  let y =
-    (rect1.attackBox.position.y >= rect2.position.y &&
-      rect1.attackBox.position.y <= rect2.position.y + rect2.height) ||
-    (rect1.attackBox.position.y + rect1.attackBox.height >= rect2.position.y &&
-      rect1.attackBox.position.y + rect1.attackBox.height <=
-        rect2.position.y + rect2.height);
-  return x && y;
-}
+
 function animate() {
   window.requestAnimationFrame(animate);
   update();
@@ -235,6 +216,7 @@ animate();
 let timer = 60;
 let timerId;
 function runTimer() {
+  if (!isGameRunning) return false;
   const timerEl = document.querySelector(".timerbox");
   if (timer > 0) {
     timerId = setTimeout(runTimer, 1000);

@@ -4,33 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fighter Game</title>
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="game-wrapper">
-      <div class="game-bar">
-        <div class="player-state player1">
-          <div class="health-bar">
-            <div class="health-line"></div>
+      <div class="game-screen">
+        <div class="game-bar">
+          <div class="player-state player1">
+            <div class="health-bar">
+              <div class="health-line"></div>
+            </div>
+            <div class="player-name">Player 1</div>
           </div>
-          <div class="player-name">Player 1</div>
-        </div>
 
-        <div class="timerbox">30</div>
-        <div class="player-state player2">
-          <div class="health-bar">
-            <div class="health-line"></div>
+          <div class="timerbox">30</div>
+          <div class="player-state player2">
+            <div class="health-bar">
+              <div class="health-line"></div>
+            </div>
+            <div class="player-name">Player 2</div>
           </div>
-          <div class="player-name">Player 2</div>
         </div>
+        <div class="game-over">
+          <h2 class="game-result">Winner</h2>
+          <h5 class="game-winner">Player 1</h5>
+          <p>
+            <button onclick="window.location.reload()">Play Again</button>
+          </p>
+        </div>
+        <canvas id="game"></canvas>
       </div>
-      <div class="game-over">
-        <h2 class="game-result">Winner</h2>
-        <h5 class="game-winner">Player 1</h5>
-      </div>
-      <canvas id="game"></canvas>
     </div>
 
     <script src="./js/utils.js"></script>
