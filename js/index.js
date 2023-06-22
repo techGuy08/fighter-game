@@ -232,6 +232,24 @@ function runTimer() {
   }
 }
 runTimer();
+function reset_game() {
+  isGameRunning = true;
+  player["position"] = {
+    x: 0,
+    y: 100,
+  };
+  player.hp = 100;
+  player.isTakingHit = false;
+  player2["position"] = {
+    x: canvas.width - 500,
+    y: 100,
+  };
+  player2.hp = 100;
+  player2.isTakingHit = false;
+  timer = 60;
+  runTimer();
+  document.querySelector(".game-over").classList.remove("active");
+}
 
 function decideGameEnd(player, player2, timerId) {
   const gameOverEl = document.querySelector(".game-over");
@@ -239,10 +257,10 @@ function decideGameEnd(player, player2, timerId) {
   const winnerNameEl = gameOverEl.querySelector(".game-winner");
   let result = "Winner!";
   if (player.hp > player2.hp) {
-    winnerNameEl.innerHTML = "Player 1";
+    winnerNameEl.innerHTML = "Akai";
     player2.isTakingHit = false;
   } else if (player2.hp > player.hp) {
-    winnerNameEl.innerHTML = "Player 2";
+    winnerNameEl.innerHTML = "Hanzo";
     player.isTakingHit = false;
   } else {
     result = "Draw!";
